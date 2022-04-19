@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { Global } from "./Global";
+import { useState, useEffect } from "react";
+import Principal from "./pages/Principal/Principal";
+import { BreedsContext } from "./context/BreedsContex";
+import { BrowserRouter, Route ,Routes} from "react-router-dom";
 
+
+import CatInfo from "./pages/CatInfo/CatInfo"
+import BestCats from "./pages/BestCats/BestCats";
 function App() {
+  const [breeds, setbreeds] = useState([]);
+
+  const url = `https://api.thecatapi.com/v1/breeds?api_key=22dbcded-7059-47aa-936f-7a73941fa92c`;
+
+  const GetApi = async () => {
+    const res = await fetch(url);
+    const json = await res.json();
+    setbreeds(json);
+  };
+  useEffect(() => {
+    GetApi();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Global />
+
+      <BreedsContext.Provider value={"sd"}>
+        <Routes>
+          <Route path="/" element={<Principal breeds={breeds} />}></Route>
+          <Route path="/catInfo" element={<CatInfo/>}></Route>
+          <Route path="/BestCats" element={<BestCats breeds={breeds}/>}></Route>
+        </Routes>
+      </BreedsContext.Provider>
+    </BrowserRouter>
   );
 }
 
