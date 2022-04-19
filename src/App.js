@@ -1,7 +1,6 @@
 import { Global } from "./Global";
 import { useState, useEffect } from "react";
 import Principal from "./pages/Principal/Principal";
-import { BreedsContext } from "./context/BreedsContex";
 import { BrowserRouter, Route ,Routes} from "react-router-dom";
 
 
@@ -25,13 +24,11 @@ function App() {
     <BrowserRouter>
       <Global />
 
-      <BreedsContext.Provider value={"sd"}>
         <Routes>
           <Route path="/" element={<Principal breeds={breeds} />}></Route>
           <Route path="/catInfo" element={<CatInfo/>}></Route>
           <Route path="/BestCats" element={<BestCats breeds={breeds}/>}></Route>
         </Routes>
-      </BreedsContext.Provider>
     </BrowserRouter>
   );
 }

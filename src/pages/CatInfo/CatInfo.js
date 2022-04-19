@@ -1,7 +1,6 @@
-import { Form } from "formik";
+
 import React, { useEffect, useState } from "react";
 
-import { FaCat } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
 import CarStar from "../../components/CarStar/CarStar";
@@ -54,11 +53,11 @@ const CatInfo = () => {
 
   useEffect(() => {
     DivCats();
-  }, []);
+  },[]);
 
   useEffect(() => {
     FechSeach();
-  }, []);
+  },[]);
   return (
     <DivCatinfo>
       <Header />

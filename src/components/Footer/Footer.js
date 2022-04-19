@@ -2,7 +2,6 @@ import React from "react";
 import { DivFooter, ImgLogoFooter, Icono } from "./styles";
 import LogoF from "../../img/CatwikiLogo.png";
 
-import { AiOutlineCopyrightCircle } from "react-icons/ai";
 
 const Footer = () => {
   return (

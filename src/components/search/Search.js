@@ -13,7 +13,7 @@ import { BiSearchAlt2 } from "react-icons/bi";
 import { Formik } from "formik";
 
 
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Search = ({ imag = [] }) => {
   //
  
