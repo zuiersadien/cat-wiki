@@ -18,7 +18,7 @@ function App() {
   };
   useEffect(() => {
     GetApi();
-  }, []);
+  }, []);// eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <BrowserRouter>

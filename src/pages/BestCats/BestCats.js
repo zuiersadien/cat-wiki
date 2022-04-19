@@ -9,7 +9,7 @@ import {
   DivTextBest,
   DivImgBest,
 } from "./styles";
-const BestCats = ({ breeds = [] }) => {
+const BestCats = ( ) => {
 
   const [topBreeds, setTopBreeds] = useState([])
   const getTopBreedsWithPhoto = async ( limit ) => {
@@ -46,7 +46,7 @@ const getTopBreeds = () => {
 
   useEffect(() => {
     getTopBreeds();
-  }, []);
+  }, []);// eslint-disable-line react-hooks/exhaustive-deps
 
   console.log();
   return (

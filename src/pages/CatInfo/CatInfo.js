@@ -53,11 +53,12 @@ const CatInfo = () => {
 
   useEffect(() => {
     DivCats();
-  },[]);
+  },[]);// eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     FechSeach();
-  },[]);
+        
+  },[]);// eslint-disable-line react-hooks/exhaustive-deps
   return (
     <DivCatinfo>
       <Header />
