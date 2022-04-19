@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.js": "/cat-wiki/static/js/main.17305cc1.js",
+    "static/media/HeroImagemd.png": "/cat-wiki/static/media/HeroImagemd.c5e665e1f33e3c00d361.png",
+    "static/media/image3.png": "/cat-wiki/static/media/image3.084e290fd2d3180fd127.png",
+    "static/media/image2.png": "/cat-wiki/static/media/image2.4e193fd0e4472a27259e.png",
+    "static/media/image1.png": "/cat-wiki/static/media/image1.ed2005d9b202dc495020.png",
+    "static/media/CatwikiLogo2.png": "/cat-wiki/static/media/CatwikiLogo2.18d5b4079a7541dc0f72.png",
+    "static/media/CatwikiLogo.png": "/cat-wiki/static/media/CatwikiLogo.de6165addb12d5df917a.png",
+    "index.html": "/cat-wiki/index.html",
+    "main.17305cc1.js.map": "/cat-wiki/static/js/main.17305cc1.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.17305cc1.js"
+  ]
+}
